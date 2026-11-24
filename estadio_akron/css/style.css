@@ -1,0 +1,239 @@
+/* Variables basadas en Paletadecolores.png */
+:root {
+    --color-blue-light: #0068FF;
+    --color-blue-dark: #0D47A1;
+    --color-red-bright: #FF0000;
+    --color-red-dark: #B71C1C;
+    --color-navy-dark: #0B192C;
+    --font-sports: 'Teko', sans-serif-condensed, sans-serif;
+    --font-text: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-navy-dark);
+    color: #FFFFFF;
+    font-family: var(--font-text);
+}
+
+/* Encabezado y Navegación */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: rgba(11, 25, 44, 0.95);
+    border-bottom: 2px solid var(--color-red-bright);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-text {
+    font-family: var(--font-sports);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+.logo-text span {
+    color: var(--color-blue-light);
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: var(--font-sports);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--color-red-bright);
+}
+
+/* Submenú desplegable */
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-blue-dark);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.4);
+    border-radius: 4px;
+    flex-direction: column;
+    gap: 0 !important;
+}
+
+.submenu li a {
+    padding: 10px 15px;
+    display: block;
+    font-size: 1.1rem;
+}
+
+.submenu li a:hover {
+    background-color: var(--color-red-dark);
+}
+
+.dropdown:hover .submenu {
+    display: flex;
+}
+
+.badge-chivas {
+    background-color: var(--color-red-bright);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-family: var(--font-sports);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Hero Section */
+.hero-banner {
+    position: relative;
+    height: 80vh;
+    background: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, rgba(11,25,44,0.95) 0%, rgba(11,25,44,0.3) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.title-large {
+    font-family: var(--font-sports);
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.subtitle-bold {
+    font-family: var(--font-sports);
+    font-size: 3rem;
+    color: #FFFFFF;
+}
+
+.subtitle-bold span {
+    color: var(--color-red-bright);
+}
+
+.hero-description {
+    margin: 15px 0 25px;
+    font-size: 1.1rem;
+    color: #DDDDDD;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--color-red-bright);
+    color: #FFF;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-family: var(--font-sports);
+    font-size: 1.4rem;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-red-dark);
+}
+
+/* Sección Informativa */
+.info-section {
+    padding: 60px 20px;
+    background-color: var(--color-blue-dark);
+    text-align: center;
+}
+
+.info-section .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.info-section h2 {
+    font-family: var(--font-sports);
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.info-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #E0E0E0;
+}
+
+.highlight-text {
+    font-weight: bold;
+    color: var(--color-blue-light) !important;
+}
+
+/* Cards */
+.cards-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 5% 80px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 25px;
+    width: 300px;
+    text-align: center;
+}
+
+.card h3 {
+    font-family: var(--font-sports);
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+.card-btn {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--color-blue-light);
+    text-decoration: none;
+    font-family: var(--font-sports);
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #050B14;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #888;
+}
